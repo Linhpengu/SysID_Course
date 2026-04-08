@@ -1,9 +1,9 @@
 # SysID_Course
-## This course is difficult, but it is fun to follow up. It also changes the way that I look at the world as an engineer. Really recommended to take this course.
+## This course is difficult, but it is fun to follow up. It also changed the way that I look at the world as an engineer.
 ## Link of the course: https://www.syscop.de/teaching/ws2024/modelling-and-system-identification
 ## Prof. Moritz Diehl, Jakob Harzer (University of Freiburg)
 
-# Some result from the course: 
+# Some results from the course: 
 
 ![EKF](/Excercies/exercise10-team_a-main/EKF_wrong_initial_State.png)
 
