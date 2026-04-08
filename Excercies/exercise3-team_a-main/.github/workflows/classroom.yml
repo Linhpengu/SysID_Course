@@ -1,0 +1,81 @@
+name: Autograding Tests
+on:
+  push:
+  workflow_dispatch:
+  repository_dispatch:
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run test for test_A
+      id: test_task_A
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: 'Test for Task A'
+        setup-command: sudo -H pip3 install pytest matplotlib numpy scipy
+        command: pytest -k 'test_A'
+        timeout: 2
+        max-score: 1
+    - name: Run test for test_C_1
+      id: test_task_C_1
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: 'Test for Task C_1'
+        setup-command: sudo -H pip3 install pytest matplotlib numpy scipy
+        command: pytest -k 'test_C_1'
+        timeout: 2
+        max-score: 1
+    - name: Run test for test_C_2
+      id: test_task_C_2
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: 'Test for Task C2'
+        setup-command: sudo -H pip3 install pytest matplotlib numpy scipy
+        command: pytest -k 'test_C_2'
+        timeout: 2
+        max-score: 1
+    - name: Run test for test_D
+      id: test_task_D
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: 'Test for Task D'
+        setup-command: sudo -H pip3 install pytest matplotlib numpy scipy
+        command: pytest -k 'test_D'
+        timeout: 2
+        max-score: 1
+    - name: Run test for test_F_1
+      id: test_task_F_1
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: 'Test for Task F1'
+        setup-command: sudo -H pip3 install pytest matplotlib numpy scipy
+        command: pytest -k 'test_F_1'
+        timeout: 2
+        max-score: 2
+    - name: Run test for test_F_2
+      id: test_task_F_2
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: 'Test for Task F2'
+        setup-command: sudo -H pip3 install pytest matplotlib numpy scipy
+        command: pytest -k 'test_F_2'
+        timeout: 2
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TEST_TASK_A_RESULTS: "${{ steps.test_task_A.outputs.result }}"
+        TEST_TASK_C_1_RESULTS: "${{ steps.test_task_C_1.outputs.result }}"
+        TEST_TASK_C_2_RESULTS: "${{ steps.test_task_C_2.outputs.result }}"
+        TEST_TASK_D_RESULTS: "${{ steps.test_task_D.outputs.result }}"
+        TEST_TASK_F_1_RESULTS: "${{ steps.test_task_F_1.outputs.result }}"
+        TEST_TASK_F_2_RESULTS: "${{ steps.test_task_F_2.outputs.result }}"
+      with:
+        runners: test_task_A,test_task_C_1,test_task_C_2,test_task_D,test_task_F_1,test_task_F_2

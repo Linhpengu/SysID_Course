@@ -1,0 +1,44 @@
+{
+    "tests": [
+      {
+        "name": "A",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_A'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "B",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_B'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "C",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_C'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "D",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_D'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 0.5
+      }
+    ]
+  }

@@ -1,0 +1,74 @@
+{
+    "tests": [
+      {
+        "name": "A1",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_A_1'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 1
+      },
+      {
+        "name": "A2",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_A_2'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 1
+      },
+      {
+        "name": "A3",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_A_3'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 1
+      },
+      {
+        "name": "A4",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_A_4'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 1
+      },
+      {
+        "name": "B",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_B'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 1
+      },
+      {
+        "name": "C",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_C'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 1
+      },
+      {
+        "name": "D",
+        "setup": "sudo -H pip3 install pytest matplotlib numpy scipy",
+        "run": "pytest -k 'test_D'",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 2,
+        "points": 1
+      }
+    ]
+  }
